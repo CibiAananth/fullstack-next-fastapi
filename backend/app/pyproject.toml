@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Cibi Aananth <cibiaananth@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.23.0"}
+pydantic = "^2.0.3"
+alembic = "^1.11.1"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.4.1"
+ruff = "^0.0.278"
+black = "^23.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

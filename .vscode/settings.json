@@ -1,0 +1,40 @@
+{
+  "editor.formatOnSave": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "eslint.validate": ["json", "jsonc"],
+  "stylelint.validate": ["css", "scss", "tailwindcss"],
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  // "files.associations": {
+  //   "*.css": "tailwindcss",
+  //   "*.scss": "tailwindcss"
+  // },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "[tailwindcss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  },
+  "stylelint.snippet": ["css", "less", "postcss", "tailwindcss"],
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": true,
+      "source.organizeImports.ruff": true
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none",
+  "mypy.dmypyExecutable": "",
+  "mypy.runUsingActiveInterpreter": true,
+  "editor.formatOnSaveMode": "file",
+  "python.analysis.typeCheckingMode": "off"
+}
