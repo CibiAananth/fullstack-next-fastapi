@@ -35,6 +35,5 @@
   "python.formatting.provider": "none",
   "mypy.dmypyExecutable": "",
   "mypy.runUsingActiveInterpreter": true,
-  "editor.formatOnSaveMode": "file",
-  "python.analysis.typeCheckingMode": "off"
+  "editor.formatOnSaveMode": "file"
 }
