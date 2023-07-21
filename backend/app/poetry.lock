@@ -239,6 +239,20 @@ zookeeper = ["kazoo (>=1.3.1)"]
 zstd = ["zstandard (==0.21.0)"]
 
 [[package]]
+name = "celery-types"
+version = "0.18.0"
+description = "Type stubs for Celery and its related packages"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "celery-types-0.18.0.tar.gz", hash = "sha256:4048d7c59d2ce26127d32c2799b776d1b23a3de699eb6e6e9df1b8136dfe950f"},
+    {file = "celery_types-0.18.0-py3-none-any.whl", hash = "sha256:93c0d25f2779bf5c985dabc4c2985d7eac8be43d1b2c05668e73973d6714f560"},
+]
+
+[package.dependencies]
+typing-extensions = ">=3.10.0,<5.0.0"
+
+[[package]]
 name = "cffi"
 version = "1.15.1"
 description = "Foreign Function Interface for Python calling C code."
@@ -1665,4 +1679,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "cc5ab9d50ba84a1c917f49847c3c3012eda40923743d03775bdd1f69eb158d28"
+content-hash = "ef474edf36d4e2a3ae39bc42327c78de8a86fb82310e95f74bcfa8d76d2973fe"

@@ -8,10 +8,10 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  // "files.associations": {
-  //   "*.css": "tailwindcss",
-  //   "*.scss": "tailwindcss"
-  // },
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  },
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint",
     "editor.codeActionsOnSave": {

@@ -23,6 +23,7 @@ types-redis = "^4.6.0.3"
 types-ujson = "^5.8.0.1"
 celery = "^5.3.1"
 asyncpg = "^0.28.0"
+celery-types = "^0.18.0"
 
 
 [tool.poetry.group.dev.dependencies]

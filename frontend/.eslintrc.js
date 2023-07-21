@@ -14,13 +14,14 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:css/recommended',
     'plugin:prettier/recommended',
+    'plugin:tailwindcss/recommended',
     'stylelint',
   ],
   plugins: [
     '@typescript-eslint',
     'react',
     'import',
-    'simple-import-sort',
+    // 'simple-import-sort',
     'css',
     'prettier',
   ],
@@ -119,27 +120,27 @@ module.exports = {
 
     'sort-imports': 'off',
 
-    'simple-import-sort/imports': [
-      'error',
-      {
-        groups: [
-          ['./*.(css|scss|less)'],
-          // ['@/(styles|theme)'],
-          ['@/(styles|theme)(/.*|$)'],
-          ['^react(-|$)'],
-          ['(next|@next)(-|$|/)'],
-          ['^@?\\w'],
-          [
-            '^@/(utils|services|hooks|hoc|types|contexts|dictionary|components|db|utilities|styles)(/.*|$)',
-          ],
-          // ['^@/services/'],
-          // ['^@/db/'],
-          // ['^@/utilities/'],
-          ['^@/'],
-          ['^\\.'],
-        ],
-      },
-    ],
+    // 'simple-import-sort/imports': [
+    //   'error',
+    //   {
+    //     groups: [
+    //       ['./*.(css|scss|less)'],
+    //       // ['@/(styles|theme)'],
+    //       ['@/(styles|theme)(/.*|$)'],
+    //       ['^react(-|$)'],
+    //       ['(next|@next)(-|$|/)'],
+    //       ['^@?\\w'],
+    //       [
+    //         '^@/(utils|services|hooks|hoc|types|contexts|dictionary|components|db|utilities|styles)(/.*|$)',
+    //       ],
+    //       // ['^@/services/'],
+    //       // ['^@/db/'],
+    //       // ['^@/utilities/'],
+    //       ['^@/'],
+    //       ['^\\.'],
+    //     ],
+    //   },
+    // ],
 
     // Note: you must disable the base rule as it can report incorrect errors
     'no-unused-expressions': 'off',
