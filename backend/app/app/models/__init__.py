@@ -1,7 +1,8 @@
-from .task import Task
+from core.db import Base
+
 from .user import User
 
 __all__ = [
-    "Task",
+    "Base",
     "User",
 ]

@@ -1,8 +1,6 @@
-from sqlalchemy import Select
-from sqlalchemy.orm import joinedload
+from core.repository import BaseRepository
 
 from app.models import User
-from core.repository import BaseRepository
 
 
 class UserRepository(BaseRepository[User]):
@@ -37,14 +35,3 @@ class UserRepository(BaseRepository[User]):
         query = await self._query(join_)
         query = query.filter(User.email == email)
         return await self._one_or_none(query)
-
-    async def _join_tasks(self, query: Select) -> Select:
-        """
-        Join tasks.
-
-        :param query: Query.
-        :return: Query.
-        """
-        return query.options(joinedload(User.tasks)).execution_options(
-            contains_joined_collection=True
-        )

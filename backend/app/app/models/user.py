@@ -6,7 +6,6 @@ from core.db.mixins import TimestampMixin
 from core.security.access_control import Allow, Everyone, RolePrincipal, UserPrincipal
 from sqlalchemy import BigInteger, Boolean, Column, Unicode
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import relationship
 
 
 class UserPermission(Enum):
@@ -25,10 +24,6 @@ class User(Base, TimestampMixin):
     password = Column(Unicode(255), nullable=False)
     username = Column(Unicode(255), nullable=False, unique=True)
     is_admin = Column(Boolean, default=False)
-
-    tasks = relationship(
-        "Task", back_populates="author", lazy="raise", passive_deletes=True
-    )
 
     __mapper_args__ = {"eager_defaults": True}
 
