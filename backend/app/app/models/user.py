@@ -4,7 +4,7 @@ from uuid import uuid4
 from core.db import Base
 from core.db.mixins import TimestampMixin
 from core.security.access_control import Allow, Everyone, RolePrincipal, UserPrincipal
-from sqlalchemy import BigInteger, Boolean, Column, Unicode
+from sqlalchemy import BigInteger, Column, Unicode
 from sqlalchemy.dialects.postgresql import UUID
 
 
@@ -16,14 +16,13 @@ class UserPermission(Enum):
 
 
 class User(Base, TimestampMixin):
-    __tablename__ = "users"
+    __tablename__ = "global_users"
 
     id = Column(BigInteger, primary_key=True, autoincrement=True)
     uuid = Column(UUID(as_uuid=True), default=uuid4, unique=True, nullable=False)
     email = Column(Unicode(255), nullable=False, unique=True)
     password = Column(Unicode(255), nullable=False)
     username = Column(Unicode(255), nullable=False, unique=True)
-    is_admin = Column(Boolean, default=False)
 
     __mapper_args__ = {"eager_defaults": True}
 
